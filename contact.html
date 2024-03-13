@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Elina Olsson -contact</title>
+    </head>
+    <body> 
+        <!--Wrapper-->
+        <!--En container som tar upp 100% av fönstrets bredd. Här finner sig även en bakgrundsbild då jag vill sätta en navigationsmeny över den.-->
+        <div class="container-fluid contact-bg-img px-0">
+            <!--
+                Navigation vars vita bakgrund har en opacitet på 25%. Under brytningspunkten lg (992px) omvandlas navigationen till en hamburgermeny, med hjälp av "navbar-expand-lg".
+                "Navbar-brand" förklarar vilket namn/företag som har webbsidan. "Span"-texten syns inte på skärmar under 992px, vilket görs tillsammans med "d-none" och "d-lg-block".
+                "Primary-color" klassen ger en blå färg till texten samt ger klassen "text-font" ett annat typsnitt till texten. "Sticky-top" gör att navigationsmenyn stannar kvar överst på sidan när man scrollar.
+            -->
+            <nav class="navbar navbar-expand-lg bg-white bg-opacity-25 mb-5 sticky-top"> 
+                <div class="container-fluid"> 
+                    <a class="navbar-brand mx-3" href="index.html"><h4 class="text-font primary-color mb-0">Elina Olsson</h4></a>
+                    <span class="text-font pt-0 pb-3 text-lowercase d-none d-lg-block d-md-none">Web designer and developer</span>
+                    <!--
+                    "Navbar-toggler" tillsammans med "data-bs-toggle" används för att trigga igång Javsscript så det går att öppna och stänga navigationsmenyn. "Aria-expanded" förklarar tillståndet på menyn, dvs om den är expanderad eller stängd.
+                    "Aria-label" talar om vilken typ av interaktivitet det handlar om.
+                    I "span"-elementet finns en klass som ger en hamburger-ikon för att användaren ska förstå att det är en meny.
+                    -->
+                    <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!--
+                    Klasserna "collapse" och "navbar-collapse" samlar ihop och döljer navbarinnehåll efter vald brytpunkt hos föräldern, i detta fall under 992px. "Justify-content-end" positionerar menyn längst till höger, horisiontellt.
+                    "Navbar-nav" ger en navigation som också har stöd för dropdown-menyer. "Nav-item" är ett list-element som erhåller en länk, "nav-link".
+                    -->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item mx-3">
+                                <a class="nav-link text-lowercase" href="projects.html">Projects</a>
+                            </li>
+                            <!--
+                            Klassen "dropdown" utformar en dropdown-meny. "Role" hjälper till att definiera att det är en knapp. När användaren trycker på knappen triggas Javascript igång och klassen "dropdown-toggle" tillsammans med "data-bs-toggle" öppnar dropdownmenyn. 
+                            "Dropdown-menu" skapar en dropdown som i detta fall har två menyalternativ, vilket skapas med klassen "dropdown-item".
+                            -->
+                            <li class="nav-item dropdown mx-3">
+                                <a class="nav-link dropdown-toggle text-lowercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About me</a>
+                                <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-lowercase text-font" href="profile.html">Profile</a></li>
+                                <li><a class="dropdown-item text-lowercase text-font" href="cv.html">CV</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link text-lowercase" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--Navigation slutar-->
+            <!--Huvudinnehåll-->
+            <!--
+                Behållare som har en utfyllnad i höjdled, "py-5". Inuti behållaren hjälper "d-flex", "justify-content-center" och "align-items-center" med positioneringen, som är centrerad i höjd- och sidled.
+                Botten-marginal adderas med "mb" och tas bort med "mb-0". "Fs-1" och "fs-5" ger olika font-storlekar till texterna. "Text-font" ger annat typsnitt och "text-lowercase" ger små bokstäver. 
+                "Primary-color" ger en blå färg till texten.
+            -->
+            <div class="container py-5">
+                <div class="d-flex flex-column justify-content-center align-items-center mb-5">
+                    <p class="fs-1 text-font text-lowercase mb-0">Elina Olsson</p>
+                    <p class="fs-5 primary-color text-font text-lowercase mb-1">Web designer and developer</p>
+                </div>
+            </div>
+            <!--
+                Behålllare som erhller en positionering med flexbox, "d-flex" och en positionering med rader och kolumner, "row" och "col".
+            -->
+            <div class="container">
+                <!--
+                    "D-flex" tillsammans med "flex-column" ger en positionering i kolumner. Här finns utfyllnad runt hela boxen, vilket görs med "p-4". Marginal infinner sig även i topp, med "mt-4" och i botten, med "mb-5".
+                    "Fs-3" ger en fontstorlek till texten på ungefär 27px.
+                -->
+                <div class="d-flex flex-column p-4 mt-4 mb-5">
+                    <p class="fs-3 mb-4"><strong>Looking forward to hear more from you</strong></p>
+                    <p>Recusandae temporibus earum magnam non quod cumque, vel quia? Ad suscipit quis voluptatibus mollitia fugit nobis ullam ex nemo, porro deleniti aperiam dolor est voluptatum cupiditate similique voluptate odio. Provident maxime ea, alias sit veritatis iusto tenetur quasi. Doloremque fugiat optio dolorum harum accusantium. Ut mollitia, rerum maiores repudiandae quae necessitatibus sapiente error temporibus nobis quos aperiam tenetur nesciunt optio nulla fugit rem porro perspiciatis neque provident autem qui ipsa! Dolores unde corporis ratione aspernatur accusantium reiciendis natus nisi inventore nemo quod ducimus doloremque, ullam ipsa vitae magni qui minima quis ad! Quis modi ipsa quam, qui autem atque animi sed voluptatibus delectus nulla?</p>
+                </div>
+                <!--
+                    "Row" tillsammans med "col" utgör tillsammans ett grid-system. "Col-12" hjälper elementen att ta upp varsin rad under 992px. Efter 992px tar bilden upp 7 delar och text med formulär tar upp 5 delar av bredden.
+                    Efter 1200px tar bild och text med formulär upp 6 delar vardera. "Mb-5" ger marginal i botten och "mb-lg-0" tar bort marginal i botten. "Mt-sm-3" ger marginal i toppen efter 576px.
+                    "P-0" tar bort utfyllnad helt. Efter 992px ges utfyllnad till höger med "pe-lg-5" på bildens box.
+                -->
+                <div class="row mx-auto my-5 pt-3">
+                    <div class="col-12 col-lg-7 col-xl-6 mb-5 mb-lg-0 mt-sm-3 pe-lg-5 text-center p-0">
+                        <!--
+                            "Img-fluid" innebär att bilden är responsiv och skalas efter hur föräldra-elementet ser ut.
+                        -->
+                        <img src="images/call-me.webp" class="img-fluid" alt="Person med telefonsladd runt sig.">
+                    </div>
+                    <div class="col-12 col-lg-5 col-xl-6">
+                        <!--
+                            "Form" utgör grunden för ett formulär. "Form-check" ger en checkbox och tillsammans med "form-switch" ges en switch som kan slidea från ena sidan till den andra.
+                            "Form-check-input" och "form-check-label" är två byggstenar i formuläret som ger själva checkrutan och rubrik till fältet.
+                            "Role="switch"" förtydligar om att det är en switch som används till checkboxen.
+                        -->
+                        <form>
+                            <div class="mb-3">
+                                <p class="fs-4"><strong>Do you want to connect?</strong></p>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Yes, we're hiring!</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault2">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">We need to take a coffee</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault3">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">No, but we want to talk about the future</label>
+                                </div>
+                            </div>
+                            <!--
+                                "Form-label" ger rubrik till fältet. "Type" förklarar om det är exempelvis ett email eller annat. "Form-control" ger ett inmatningsfält. "Placeholder" ger 
+                                tillfällig text till fältet. "Id" ger ett specifikt id till elementet, som sedan går att använda och editera i CSS.
+                            -->
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label fs-5">Email address</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label fs-5">Text</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Write your message here" rows="3"></textarea>
+                            </div>
+                            <!--
+                                "Text-center" centrerar text till och med 576px, och efter det lägger sig knappen till höger med hjälp av "text-sm-end".
+                                "Type" anger vad det är för typ av element. "Btn" anger att det är en knapp och "btn-secondary" ger layout till knappen. "Btn-color" ger annan textfärg 
+                                till knappen och "btn-lg" ger större storlek till knappen. "Text-font" ger annat typsnitt, i detta fall "Abril Fatface". "Text-uppercase" ger stor bokstav.
+                            -->
+                            <div class="text-center text-sm-end">
+                                <button type="submit" class="my-4 btn btn-secondary btn-color btn-lg text-font text-uppercase">Contact me</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--Huvudinnehåll slutar-->
+            <!--Sidfot med ikoner samt några kontaktuppgifter-->
+            <!--
+                "Container-fluid" gör så sidfoten tar upp 100% av webbsidans bredd. "Bg-dark" ger ett mörkare intryck av sidfotens bakgrund. Utfyllnad ges i topp och botten genom py-5.
+                Containern är uppbyggt som ett gridsystem, med rader och kolumner. "Row-cols-1" talar om att varje kolumn ska ta upp en hel rad. 
+            -->
+            <div class="container-fluid text-center bg-dark py-5">
+                <div class="row row-cols-1">
+                    <div class="col mb-3">
+                        <a href="https://linkedin.com/in/elina-olsson-5504181b0"><i class="fa-brands fa-linkedin fs-3 pe-2 link-color"></i></a>
+                        <a href="http://github.com/elinaols"><i class="fa-brands fa-github fs-3 pe-2 link-color"></i></a>
+                        <a href="contact.html"><i class="fa-solid fa-phone fs-3 link-color"></i></a>
+                    </div>
+                    <div class="col">
+                        <p class="text-lowercase link-color mb-3"><strong class="link-color">Email:</strong><br>elina.olsson@student.hv.se</p>
+                    </div>
+                    <div class="col">
+                        <p class="text-lowercase link-color mb-3"><strong class="link-color">Adress: </strong><br>Lingonvägen 1, 123 45 Stockholm</p>
+                    </div>
+                </div>
+            </div>
+            <!--Sidfot slutar-->
+        </div>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

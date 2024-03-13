@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Elina Olsson -cv</title>
+    </head>
+    <body>
+        <!--Wrapper-->
+        <!--En container som tar upp 100% av fönstrets bredd. Här finner sig även en bakgrundsbild då jag vill sätta en navigationsmeny över den.-->
+        <div class="container-fluid px-0 cv-bg-img">
+            <!--
+                Navigation vars vita bakgrund har en opacitet på 25%. Under brytningspunkten lg (992px) omvandlas navigationen till en hamburgermeny, med hjälp av "navbar-expand-lg".
+                "Navbar-brand" förklarar vilket namn/företag som har webbsidan. "Span"-texten syns inte på skärmar under 992px, vilket görs tillsammans med "d-none" och "d-lg-block".
+                "Primary-color" klassen ger en blå färg till texten samt ger klassen "text-font" ett annat typsnitt till texten. "Sticky-top" gör att navigationsmenyn stannar kvar överst på sidan när man scrollar.
+            -->
+            <nav class="navbar navbar-expand-lg bg-white bg-opacity-25 mb-5 sticky-top"> 
+                <div class="container-fluid"> 
+                    <a class="navbar-brand mx-3" href="index.html"><h4 class="text-font primary-color mb-0">Elina Olsson</h4></a>
+                    <span class="text-font pt-0 pb-3 text-lowercase d-none d-lg-block d-md-none">Web designer and developer</span>
+                    <!--
+                    "Navbar-toggler" tillsammans med "data-bs-toggle" används för att trigga igång Javsscript så det går att öppna och stänga navigationsmenyn. "Aria-expanded" förklarar tillståndet på menyn, dvs om den är expanderad eller stängd.
+                    "Aria-label" talar om vilken typ av interaktivitet det handlar om.
+                    I "span"-elementet finns en klass som ger en hamburger-ikon för att användaren ska förstå att det är en meny.
+                    -->
+                    <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!--
+                    Klasserna "collapse" och "navbar-collapse" samlar ihop och döljer navbarinnehåll efter vald brytpunkt hos föräldern, i detta fall under 992px. "Justify-content-end" positionerar menyn längst till höger, horisiontellt.
+                    "Navbar-nav" ger en navigation som också har stöd för dropdown-menyer. "Nav-item" är ett list-element som erhåller en länk, "nav-link".
+                    -->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item mx-3">
+                                <a class="nav-link text-lowercase" href="projects.html">Projects</a>
+                            </li>
+                            <!--
+                            Klassen "dropdown" utformar en dropdown-meny. "Role" hjälper till att definiera att det är en knapp. När användaren trycker på knappen triggas Javascript igång och klassen "dropdown-toggle" tillsammans med "data-bs-toggle" öppnar dropdownmenyn. 
+                            "Dropdown-menu" skapar en dropdown som i detta fall har två menyalternativ, vilket skapas med klassen "dropdown-item".
+                            -->
+                            <li class="nav-item dropdown mx-3">
+                                <a class="nav-link dropdown-toggle text-lowercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About me</a>
+                                <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-lowercase text-font" href="profile.html">Profile</a></li>
+                                <li><a class="dropdown-item text-lowercase text-font" href="cv.html">CV</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link text-lowercase" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--Navigation slutar-->
+            <!--Huvudinnehåll-->
+            <!--
+                En container med utfyllnad i höjdled som ges med "pt" samt "pb". Marginal till botten ges med "mb".
+                "D-flex" och "flex-column" positionerar elementen på rad efter varandra. "Justify-content-center" och "align-items-center" centrerar allt i höjd- och sidled.
+                Annat typsnitt ges med "text-font" och "text-lowercase" ger små bokstäver. "Primary-color" ger blå text.
+            -->
+            <div class="container pt-3 pt-sm-5 pb-3">
+                <div class="d-flex flex-column justify-content-center align-items-center mb-5">
+                    <p class="fs-1 text-font text-lowercase mb-0">Elina Olsson</p>
+                    <p class="fs-5 primary-color text-font text-lowercase mb-1">Web designer and developer</p>
+                    <!--
+                        Lista som är positionerad med hjälp av "d-flex". "Flex-lg-row" lägger list-elementen på rad bredvid varandra efter 992px och "flex-wrap" sätter list-elementen på en vertikal linje när utrymme fattas på raden.
+                        "Justify-content-center" centrerar elementen.
+                        "List-inline" tar bort punkten på li-elementet. "Pe-4" ger utfyllnad till höger om list-elementet.
+                    -->
+                    <ul class="fs-6 text-font text-lowercase d-flex flex-lg-row flex-wrap justify-content-center">
+                        <li class="list-inline pe-4">+761234567</li>
+                        <!--
+                            "Link-dark" ger en mörk länk och "link-offset-2" ger distans mellan text och linje. Opacitet ligger på 25% och när användaren hovrar över elementet får länken 100% opacitet. Detta görs med
+                            "link-underline-opacity-25" och "link-underline-opacity-100-hover".
+                        -->
+                        <li class="pe-4"><a href="http://github.com/elinaols" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">https://github/elinaols</a></li>
+                        <li class="pe-4">elina.olsson@student.hv.se</li>
+                        <li class="pe-4">Stockholm</li>
+                    </ul>
+                </div>
+            </div>
+            <!--
+                Container som har ett gridsystem i form av kolumner, "col". Texten är centrerad, vilket görs med "text-center". Marginal i botten ges med "mb" och utfyllnad i botten ges med "pb".
+                "Border-bottom" ger en linje under texten. "Fs-3" ger en större font-storlek. "Text-start" ger en västerjustering på texten. "Text-start" ger vänsterjusterad text och "text-end" ger högerjusterad text.
+                "Primary-color" ger blå färg till texten.
+                
+                Inuti vissa kolumner finns ytterligare en container som positionerar elementen med "d-flex" och "justify-content-between". Det ger maximalt utrymme mellan elementen i sidled.
+                "Flex-wrap" sätter elementen under varandra när utrymmet inte räcker till. 
+            --> 
+            <div class="container text-center mb-5">
+                <div class="col pb-5">
+                    <p class="fs-3 border-bottom pb-3"><strong>Summary</strong></p>
+                    <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quaerat velit commodi tenetur dignissimos quo natus quasi quis minus fuga illo pariatur accusamus earum quos numquam voluptates praesentium similique possimus sapiente iure, dolorem aperiam veniam nobis.</p>
+                </div>
+                <div class="col pb-5">
+                    <p class="fs-3 border-bottom pb-3"><strong>Experience</strong></p>
+                    <p class="text-start mb-0"><strong class="primary-color mb-0 fs-5">Sthlm Ladies & Gents</strong></p>
+                    <div class="container px-0 d-flex justify-content-between flex-wrap">
+                        <p class="text-start col">Hairdresser<br><i>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</i></p>
+                        <p class="text-end mb-0 col">Aug 2021 - Aug 2023</p>
+                    </div>
+                    <p class="text-start mb-0"><strong class="primary-color mb-0 fs-5">Salong VITA</strong></p>
+                    <div class="container px-0 d-flex justify-content-between flex-wrap">
+                        <p class="text-start col">Hairdresser<br><i>Lorem sit amet consectetur adipisicing.</i></p>
+                        <p class="text-end mb-0 col">Jan 2021 - Jul 2021</p>
+                    </div>
+                    <p class="text-start mb-0"><strong class="primary-color mb-0 fs-5">Björn Axén</strong></p>
+                    <div class="container px-0 d-flex justify-content-between flex-wrap">
+                        <p class="text-start col">Hairdresser<br><i>Dolor sit amet consectetur officiis nostrum eveniet tempore in similique odit.</i></p>
+                        <p class="text-end mb-0 col">Jul 2019 - Jan 2021</p>
+                    </div>
+                </div>
+                <div class="col pb-5">
+                    <p class="fs-3 border-bottom pb-3"><strong>Education</strong></p>
+                    <p class="text-start mb-0"><strong class="primary-color mb-0 fs-5">University West</strong></p>
+                    <div class="container px-0 d-flex justify-content-between flex-wrap">
+                        <p class="text-start col">Webmaster, 120 hp</p>
+                        <p class="text-end mb-0 col">2023-</p>
+                    </div>
+                </div>
+                <div class="col pb-4">
+                    <p class="fs-3 border-bottom pb-3"><strong>Skills</strong></p>
+                    <p><strong class="fs-5 primary-color pe-2">Client side</strong><span>html - css - javascript - bootstrap - sass - figma - krita - lighthouse</span></p>
+                    <p><strong class="fs-5 primary-color pe-2">Server side</strong><span>linux - mariadb - sql - php - virtual machine - nodejs</span></p>
+                </div>
+            </div>
+            <!--
+                "D-none" tillsammans med "d-sm-block" gör så att "bild-karusellen" inte syns förrän efter 576px. 
+                En skugga runt containern infinner sig med "shadow" och rundade hörn med "rounded". 
+            -->
+            <div class="container mb-5 d-none d-sm-block shadow rounded p-0">
+                <!--
+                    "Carousel" och "slide" indikerar på att det är en karusell som gör att användaren har möjlighet att skifta från en bild till en annan. "Data-bs-ride" hjälper till att göra detta automatiskt.
+                    "Carousel-dark" ger ett mörkare intryck på indikatorerna.
+                -->
+                <div id="carouselExample" class="carousel slide carousel-dark" data-bs-ride="carousel">
+                <!--
+                    "Carousel-indicators" ger möjlighet till att klicka mellan bilderna samt se vilken sida man befinner sig på.
+                    "Data-bs-slide" förklarar vilken bild som karusellen ska skifta till. "Data-bs-target" erhåller en specifik selektor, som är menad till att kunna göra ändringar på i CSS.
+                    "Active" används för att karusellen ska förbli synlig på webbsidan. "Aria-current" förklarar tillståndet för ett element som representerar ett annat, i detta fall den aktuella bilden som karusellen är på. 
+                -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
+                    <!--
+                        "Carousel-inner" hjälper till att lägga till bilder till karusellen. "Carousel-item" definierar själva bilden som slideas in. "Data-bs-interval" anger intervallet som ska köras innan nästa bild slidear in.
+                        "D-block" ger ett block-element och "w-100" ger en bredd på 100% till bilden.
+                    -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="4000">
+                            <img src="images/memorygame-big.webp" class="d-block w-100 rounded" alt="Memoryspel">
+                        </div>
+                        <div class="carousel-item"  data-bs-interval="4000">
+                            <img src="images/shady-shade-big.webp" class="d-block w-100 rounded" alt="Webbplats som säljer solglasögon.">
+                        </div>
+                    </div>
+                    <!--
+                        "Carousel-control-prev" ger väg till den tidigare bilden och "carousel-control-next" anger nästkommande bild som ska dyka upp. "Data-bs-slide" adderar specifikt värde (vänster eller höger) till 
+                        knapparna för att manuellt gå fram och tillbaka mellan bilderna.
+                        "Carousel-control-prev-icon" och "carousel-control-next-icon" ger ikoner till knapparna. "Aria-hidden" anger om elementet visas eller ej, och "visually-hidden" gömmer innehåll.
+                    -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!--
+                "Container-fluid" ger en bredd på 100% i sidled. Positioneringen av bilderna sker med hjälp av "d-flex" och "flex-column", som ger kolumner.
+                "D-block" säger till oss att det är ett block-element. "D-sm-none" anger att bilderna inte ska synas när skärmstorleken är större än 576px. 
+                "Img-fluid" innebär att bilden är responsiv och skalas efter hur föräldra-elementet ser ut.
+            -->
+            <div class="container-fluid p-0">
+                <div class="d-flex flex-column">
+                    <img src="images/memorygame-sm.webp" class="d-block mb-5 mb-sm-0 d-sm-none img-fluid" alt="Memoryspel">
+                    <img src="images/shady-shade-sm.webp" class="d-block mb-5 mb-sm-0 d-sm-none img-fluid" alt="Webbplats som säljer solglasögon.">
+                </div>
+            </div>
+            <!--Huvudinnehåll slutar-->
+            <!--Sidfot med ikoner samt några kontaktuppgifter-->
+            <!--
+                "Container-fluid" gör så sidfoten tar upp 100% av webbsidans bredd. "Bg-dark" ger ett mörkare intryck av sidfotens bakgrund. Utfyllnad ges i topp och botten genom py-5.
+                Containern är uppbyggt som ett gridsystem, med rader och kolumner. "Row-cols-1" talar om att varje kolumn ska ta upp en hel rad. 
+            -->
+            <div class="container-fluid text-center bg-dark py-5">
+                <div class="row row-cols-1">
+                    <div class="col mb-3">
+                        <a href="https://linkedin.com/in/elina-olsson-5504181b0"><i class="fa-brands fa-linkedin fs-3 pe-2 link-color"></i></a>
+                        <a href="http://github.com/elinaols"><i class="fa-brands fa-github fs-3 pe-2 link-color"></i></a>
+                        <a href="contact.html"><i class="fa-solid fa-phone fs-3 link-color"></i></a>
+                    </div>
+                    <div class="col">
+                        <p class="text-lowercase link-color mb-3"><strong class="link-color">Email:</strong><br>elina.olsson@student.hv.se</p>
+                    </div>
+                    <div class="col">
+                        <p class="text-lowercase link-color mb-3"><strong class="link-color">Adress: </strong><br>Lingonvägen 1, 123 45 Stockholm</p>
+                    </div>
+                </div>
+            </div>
+            <!--Sidfot slutar-->
+        </div>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

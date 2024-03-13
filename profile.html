@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Elina Olsson -profile</title>
+    </head>
+    <body>
+        <!--Wrapper-->
+        <!--En container som tar upp 100% av fönstrets bredd. Här finner sig även en bakgrundsbild då jag vill sätta en navigationsmeny över den.-->
+        <div class="container-fluid px-0 profile-bg-img">
+            <!--
+                Navigation vars vita bakgrund har en opacitet på 25%. Under brytningspunkten lg (992px) omvandlas navigationen till en hamburgermeny, med hjälp av "navbar-expand-lg".
+                "Navbar-brand" förklarar vilket namn/företag som har webbsidan. "Span"-texten syns inte på skärmar under 992px, vilket görs tillsammans med "d-none" och "d-lg-block".
+                "Primary-color" klassen ger en blå färg till texten samt ger klassen "text-font" ett annat typsnitt till texten. "Sticky-top" gör att navigationsmenyn stannar kvar överst på sidan när man scrollar.
+            -->
+            <nav class="navbar navbar-expand-lg bg-white bg-opacity-25 mb-5 sticky-top"> 
+                <div class="container-fluid"> 
+                    <a class="navbar-brand mx-3" href="index.html"><h4 class="text-font primary-color mb-0">Elina Olsson</h4></a>
+                    <span class="text-font pt-0 pb-3 text-lowercase d-none d-lg-block d-md-none">Web designer and developer</span>
+                    <!--
+                    "Navbar-toggler" tillsammans med "data-bs-toggle" används för att trigga igång Javsscript så det går att öppna och stänga navigationsmenyn. "Aria-expanded" förklarar tillståndet på menyn, dvs om den är expanderad eller stängd.
+                    "Aria-label" talar om vilken typ av interaktivitet det handlar om.
+                    I "span"-elementet finns en klass som ger en hamburger-ikon för att användaren ska förstå att det är en meny.
+                    -->
+                    <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!--
+                    Klasserna "collapse" och "navbar-collapse" samlar ihop och döljer navbarinnehåll efter vald brytpunkt hos föräldern, i detta fall under 992px. "Justify-content-end" positionerar menyn längst till höger, horisiontellt.
+                    "Navbar-nav" ger en navigation som också har stöd för dropdown-menyer. "Nav-item" är ett list-element som erhåller en länk, "nav-link".
+                    -->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item mx-3">
+                                <a class="nav-link text-lowercase" href="projects.html">Projects</a>
+                            </li>
+                            <!--
+                            Klassen "dropdown" utformar en dropdown-meny. "Role" hjälper till att definiera att det är en knapp. När användaren trycker på knappen triggas Javascript igång och klassen "dropdown-toggle" tillsammans med "data-bs-toggle" öppnar dropdownmenyn. 
+                            "Dropdown-menu" skapar en dropdown som i detta fall har två menyalternativ, vilket skapas med klassen "dropdown-item".
+                            -->
+                            <li class="nav-item dropdown mx-3">
+                                <a class="nav-link dropdown-toggle text-lowercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About me</a>
+                                <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-lowercase text-font" href="profile.html">Profile</a></li>
+                                <li><a class="dropdown-item text-lowercase text-font" href="cv.html">CV</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link text-lowercase" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--Navigation slutar-->
+            <!--Huvudinnehåll-->
+            <!--
+                Container som erhåller ett gridsystem med rader och kolumner, efter 768px tar texten upp 7 delar och bilden 5 delar av sidans bredd, vilket görs med "col-md-7" och "col-md-5".
+                En centrering av text och bild sker med "text-center". Marginal i topp befinner sig också med hjälp av "mt-5".
+            --> 
+            <div class="container mt-5 text-center">
+                <div class="row">
+                    <div class="col-md-7 ps-0 mt-5 pt-3">
+                        <!--
+                            Små bokstäver ges med "text-lowercase" och "text-font" ger annat typsnitt till texten. 
+                            Inom "span"-elementet finns extra marginal till vänster för att göra lite designförändringar för textens positionering, som sker efter 768px. "Primary-color" ger blå färg till texten.
+                        -->
+                        <p class="fs-3 text-lowercase text-font">Creative designer and developer <br><span class="ms-md-5 fs-1 text-lowercase text-font primary-color">Elina Olsson</span></p>
+                    </div>
+                    <!--
+                        Marginal i höjdled börjar på 16px (my-3) och efter 768px finns ingen marginal. Rundade hörn ges med "rounded". "Img-fluid" innebär att bilden är responsiv och skalas efter hur föräldra-elementet ser ut.
+                    -->
+                    <div class="col-md-5 my-3 my-md-0">
+                        <img src="images/me.webp" class="img-fluid rounded" alt="Me with curly hair">
+                    </div>
+                </div>
+            </div>
+            <!--
+                Container som erhåller ett gridsystem med rader som ges med "container" och "row", samt en marginal i höjdled ges med "my-5". 
+            -->
+            <div class="container my-5">
+                <div class="row text-start p-4 mb-5">
+                    <p class="fs-3 pb-2"><strong>A little bit about me</strong></p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur consequatur accusamus alias eos commodi animi odit voluptas, et magnam tenetur eum, maxime delectus beatae! Amet molestiae laboriosam, numquam delectus ipsa maiores dignissimos qui dolor dolore nemo magni eveniet exercitationem odio, deserunt, cumque esse omnis. Debitis ullam consequatur laborum fugiat facere, non magni, vitae beatae, sunt repudiandae autem ex facilis quisquam quos repellendus earum. Inventore, quasi?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque quas maxime assumenda natus officiis blanditiis inventore aperiam odio corrupti accusantium tenetur autem minus dignissimos facilis voluptatem nulla laborum laudantium quibusdam non, nihil, sint vel iusto! Quidem placeat repellendus autem possimus debitis sint modi? Dicta itaque quae rem a in perferendis sint deserunt laborum at dolores?</p>
+                </div>
+            </div>
+            <!--
+                "D-flex" och "justify-content-around" ger positioneringen av bilderna på rad. Utrymme mellan bilderna ges med "justify-content-around".
+                "Flex-wrap" positionerar om bilderna på ny rad om utrymmet inte är tillräckligt. En marginal i höjdled finns och blir med "my-5".
+            -->
+            <div class="container">
+                <div class="d-flex justify-content-around flex-wrap my-5">
+                    <!--
+                        Klassen "rounded" ger runda hörn medan klassen "rounded-circle" ger en cirkelform. "Img-fluid" innebär att bilden är responsiv och skalas efter hur föräldra-elementet ser ut. 
+                        En marginal i y-led infinner sig med "my-3".
+                    -->
+                    <img src="images/cat-leia.webp" class="rounded img-fluid my-3" alt="Katt Leia">
+                    <img src="images/vaxbo.webp" class="rounded-circle img-fluid my-3" alt="Växbo by">
+                    <img src="images/me-ofa.webp" class="rounded img-fluid my-3" alt="Me and Ofa">
+                </div>
+            </div>
+            <!--Huvudinnehåll slutar-->
+            <!--Sidfot med ikoner samt några kontaktuppgifter-->
+            <!--
+                "Container-fluid" gör så sidfoten tar upp 100% av webbsidans bredd. "Bg-dark" ger ett mörkare intryck av sidfotens bakgrund. Utfyllnad ges i topp och botten genom py-5.
+                Containern är uppbyggt som ett gridsystem, med rader och kolumner. "Row-cols-1" talar om att varje kolumn ska ta upp en hel rad. 
+            -->
+            <div class="container-fluid text-center bg-dark py-5">
+                <div class="row row-cols-1">
+                    <div class="col mb-3">
+                        <a href="https://linkedin.com/in/elina-olsson-5504181b0"><i class="fa-brands fa-linkedin fs-3 pe-2 link-color"></i></a>
+                        <a href="http://github.com/elinaols"><i class="fa-brands fa-github fs-3 pe-2 link-color"></i></a>
+                        <a href="contact.html"><i class="fa-solid fa-phone fs-3 link-color"></i></a>
+                    </div>
+                    <div class="col">
+                        <p class="text-lowercase link-color mb-3"><strong class="link-color">Email:</strong><br>elina.olsson@student.hv.se</p>
+                    </div>
+                    <div class="col">
+                        <p class="text-lowercase link-color mb-3"><strong class="link-color">Adress: </strong><br>Lingonvägen 1, 123 45 Stockholm</p>
+                    </div>
+                </div>
+            </div>
+            <!--Sidfot slutar-->
+        </div>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

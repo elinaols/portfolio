@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Elina Olsson -projekt</title>
+    </head>
+    <body>
+        <main class="main">
+            <!--Wrapper--> 
+            <!--En container som tar upp 100% av fönstrets bredd. Här finner sig även en bakgrundsbild då jag vill sätta en navigationsmeny över den.-->
+            <div class="container-fluid px-0 projects-bg-img">
+                <!--
+                    Navigation vars vita bakgrund har en opacitet på 25%. Under brytningspunkten lg (992px) omvandlas navigationen till en hamburgermeny, med hjälp av "navbar-expand-lg".
+                    "Navbar-brand" förklarar vilket namn/företag som har webbsidan. "Span"-texten syns inte på skärmar under 992px, vilket görs tillsammans med "d-none" och "d-lg-block".
+                    "Primary-color" klassen ger en blå färg till texten samt ger klassen "text-font" ett annat typsnitt till texten. "Sticky-top" gör att navigationsmenyn stannar kvar överst på sidan när man scrollar.
+                -->
+                <nav class="navbar navbar-expand-lg bg-white bg-opacity-25 mb-5 sticky-top"> 
+                    <div class="container-fluid"> 
+                        <a class="navbar-brand mx-3" href="index.html"><h4 class="text-font primary-color mb-0">Elina Olsson</h4></a>
+<<<<<<< HEAD
+                        <span class="text-font pt-0 pb-3 text-lowercase d-none d-lg-block d-md-none">Webbutvecklare</span>
+=======
+                        <span class="text-font pt-0 pb-3 text-lowercase d-none d-lg-block d-md-none">Fullstack utvecklare</span>
+>>>>>>> f7d9320 (Updated portfolio)
+                        <!--
+                        "Navbar-toggler" tillsammans med "data-bs-toggle" används för att trigga igång Javsscript så det går att öppna och stänga navigationsmenyn. "Aria-expanded" förklarar tillståndet på menyn, dvs om den är expanderad eller stängd.
+                        "Aria-label" talar om vilken typ av interaktivitet det handlar om.
+                        I "span"-elementet finns en klass som ger en hamburger-ikon för att användaren ska förstå att det är en meny.
+                        -->
+                        <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!--
+                            Klasserna "collapse" och "navbar-collapse" samlar ihop och döljer navbarinnehåll efter vald brytpunkt hos föräldern, i detta fall under 992px. "Justify-content-end" positionerar menyn längst till höger, horisiontellt.
+                            "Navbar-nav" ger en navigation som också har stöd för dropdown-menyer. "Nav-item" är ett list-element som erhåller en länk, "nav-link".
+                        -->
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                            <ul class="navbar-nav mb-2 mb-lg-0">
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link text-lowercase" href="projects.html">Projekt</a>
+                                </li>
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link text-lowercase" href="cv.html">CV</a>
+                                </li>
+<<<<<<< HEAD
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link text-lowercase" href="contact.html">Kontakt</a>
+                                </li>
+=======
+>>>>>>> f7d9320 (Updated portfolio)
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!--Navigation slutar-->
+                <!--Huvudinnehåll-->
+                <!--
+                    Container som erhåller en centrerad text, som har utfyllnad i höjdled, vilket ges med py-5.
+                    Blå färg och annat typsnitt ges med "primary-color" och "text-font". Små bokstäver ges med klassen "text-lowercase".
+                    Klassen "fs-1" ger en stor text-storlek och en marginal i botten infinner sig, som görs med mb-2.
+                -->
+                <div class="container py-5">
+                    <p class="text-center mb-2 text-font fs-1 primary-color text-lowercase">Tidigare projekt</p>
+                </div>
+                <!--
+                    Container som har 0 utfyllnad i sidled och lite utfyllnad i botten.
+                -->
+                <div class="container px-0 pb-2">
+                    <!--
+                        En positionering av korten sker med "d-flex" samt "flex-row". "Justify-content-around" ger utrymme runt korten. 
+                        "Flex-wrap" hjälper till att positionera om korten så de hamnar i en vertikal linje, om utrymme fattas för de båda på samma rad.
+                    -->
+                    <div class="d-flex flex-row flex-wrap justify-content-around mb-5 gap-5">
+                        <!--
+                            Skuggning runt korten ges med "shadow" och "bg-body-tertiary". Rundade hörn med klassen "rounded".
+                            "Img-fluid" innebär att bilderna är responsiva och skalas efter hur föräldra-elementet ser ut.
+                            "Card-body" klassen är kortens kropp som även erhåller utfyllnad till innehållet. "Text-end" positonerar element till höger i elementet och "text-start" ger en vänster positionering för h5- 
+                            och p-elementen. 
+                            Länken erhåller en klass "role=button" som finns med för att dels för att komplettera klassen "btn" (som egentligen används för button-element), dels förtydliga vad själva syftet med länken är. 
+                            "Btn-color" sätter textfärgen till en vit färg och "text-font" ger annat typsnitt.
+                        -->
+                        <div class="card shadow bg-body-tertiary rounded mx-3 mb-3 mb-lg-0">
+                            <img src="images/airpulse2.webp" class="img-fluid p-0" alt="Lista">
+                            <div class="card-body text-end">
+                                <h5 class="card-title text-start"><strong>Airpulse</strong></h5>
+                                <p class="card-text text-start">Väderapp skapad med React</p>
+                                <a href="https://webbkurs.ei.hv.se/~elol0031/JSR200/Examinationsuppgift/" role="button" class="btn btn-secondary btn-color text-font text-lowercase">Visa</a>
+                            </div>
+                        </div>
+                        <div class="card shadow bg-body-tertiary rounded mx-3 mb-3 mb-lg-0">
+                            <img src="images/dreamlocations2.webp" class="img-fluid p-0" alt="Lista">
+                            <div class="card-body text-end">
+                                <h5 class="card-title text-start"><strong>Dröm destinationer</strong></h5>
+                                <p class="card-text text-start">Lista med resemål byggd i vanilla JS</p>
+                                <a href="https://webbkurs.ei.hv.se/~elol0031/JSR200/Checkpoint_1/" role="button" class="btn btn-secondary btn-color text-font text-lowercase">Visa</a>
+                            </div>
+                        </div>
+                        <div class="card shadow bg-body-tertiary rounded mx-3 mb-3 mb-lg-0">
+                            <img src="images/angularVueRestaurants2.webp" class="img-fluid p-0" alt="Lista">
+                            <div class="card-body text-end">
+                                <h5 class="card-title text-start"><strong>Angular projekt</strong></h5>
+                                <p class="card-text text-start">Hämtar data från JSON-fil</p>
+                                <a href="https://webbkurs.ei.hv.se/~elol0031/JSR200/Checkpoint_3/restaurants-angular/" role="button" class="btn btn-secondary btn-color text-font text-lowercase">Visa</a>
+                            </div>
+                        </div>
+                        <div class="card shadow bg-body-tertiary rounded mx-3 mb-3 mb-lg-0">
+                            <img src="images/angularVueRestaurants2.webp" class="img-fluid p-0" alt="Lista">
+                            <div class="card-body text-end">
+                                <h5 class="card-title text-start"><strong>Vue projekt</strong></h5>
+                                <p class="card-text text-start">Hämtar data from JSON-fil</p>
+                                <a href="https://webbkurs.ei.hv.se/~elol0031/JSR200/Checkpoint_3/restaurants-vue/" role="button" class="btn btn-secondary btn-color text-font text-lowercase">Visa</a>
+                            </div>
+                        </div>
+                        <div class="card shadow bg-body-tertiary rounded mx-3 mb-5 mb-lg-0">
+                            <img src="images/memorygame2.webp" class="img-fluid p-0" alt="Memoryspel">
+                            <div class="card-body text-end">
+                                <h5 class="card-title text-start"><strong>Memoryspel</strong></h5>
+                                <p class="card-text text-start">Mitt första JavaScript projekt</p>
+<<<<<<< HEAD
+                                <a href="https://webbkurs.ei.hv.se/~elol0031/GJP100/Projekt/" role="button" class="btn btn-secondary btn-color text-font text-lowercase">Visa</a>
+=======
+                                <a href="https://elinaols.github.io/memorygame_project/" role="button" class="btn btn-secondary btn-color text-font text-lowercase">Visa</a>
+>>>>>>> f7d9320 (Updated portfolio)
+                            </div>
+                        </div>
+                        <div class="card shadow bg-body-tertiary rounded mx-3 mb-3 mb-lg-0">
+                            <img src="images/edenskolan2.webp" class="img-fluid p-0" alt="Lista">
+                            <div class="card-body text-end">
+                                <h5 class="card-title text-start"><strong>Edenskolan</strong></h5>
+                                <p class="card-text text-start">Bokningssystem byggt med PHP</p>
+                                <a href="https://webbkurs.ei.hv.se/~elol0031/WPR201/PHP_inlamning_ElinaOlsson/" role="button" class="btn btn-secondary btn-color text-font text-lowercase">Visa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--
+                    Container som vänsterjusterar text med "text-start". "p-4" ger utfyllnad runt hela containern och "mb-5" ger marginal i botten.
+                -->
+                <div class="container p-4 mt-3 mb-5 text-start">
+                    <!--
+                        "fs-3" ger en större text-storlek och "pb-2" ger en utfyllnad i botten mot brödtexten.
+                    -->
+                    <div class="fs-3 pb-2"><strong>Olika projekt som jag utvecklat</strong></div>
+                    <p>
+                        Ovan presenteras ett urval från de projekt som jag utvecklat under utbildningens gång. I dessa projekt har jag använt olika teknologier för att bygga funktionella och interaktiva webbsidor.
+                        Här har jag använt teknologier som React, Angular, Vue, JavaScript och PHP för att kunna skapa lösningar som både är skalbara och användarvänliga. Varje projekt har gett mig möjlighet att 
+                        fördjupa mina kunskaper och tillämpa bästa praxis inom frontend- och backendutveckling.
+                    </p>
+<<<<<<< HEAD
+                </div>
+                <!--Huvudinnehåll slutar-->
+                <!--Sidfot med ikoner samt några kontaktuppgifter-->
+                <!--
+                    "Container-fluid" gör så sidfoten tar upp 100% av webbsidans bredd. "Bg-dark" ger ett mörkare intryck av sidfotens bakgrund. Utfyllnad ges i topp och botten genom py-5.
+                    Containern är uppbyggt som ett gridsystem, med rader och kolumner. "Row-cols-1" talar om att varje kolumn ska ta upp en hel rad. 
+                -->
+                <div class="container-fluid text-center bg-dark py-5">
+                    <div class="row row-cols-1">
+                        <div class="col mb-3">
+                            <a href="https://linkedin.com/in/elina-olsson-5504181b0"><i class="fa-brands fa-linkedin fs-3 pe-2 link-color"></i></a>
+                            <a href="http://github.com/elinaols"><i class="fa-brands fa-github fs-3 pe-2 link-color"></i></a>
+                            <a href="contact.html"><i class="fa-solid fa-phone fs-3 link-color"></i></a>
+                        </div>
+                        <div class="col">
+                            <p class="text-lowercase link-color mb-3"><strong class="link-color">mail:</strong><br>elinaannaolsson@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+=======
+                    <div class="d-flex align-items-center">
+                        <a href="http://github.com/elinaols"><i class="fa-brands fa-github fs-3 pe-2"></i></a>
+                        <a href="http://github.com/elinaols" class="text-dark">Se mina projekt på github här</a>
+                    </div>
+                </div>
+                <!--Huvudinnehåll slutar-->
+                <!--Sidfot med ikoner samt några kontaktuppgifter-->
+                <!--
+                    "Container-fluid" gör så sidfoten tar upp 100% av webbsidans bredd. "Bg-dark" ger ett mörkare intryck av sidfotens bakgrund. Utfyllnad ges i topp och botten genom py-5.
+                    Containern är uppbyggt som ett gridsystem, med rader och kolumner. "Row-cols-1" talar om att varje kolumn ska ta upp en hel rad. 
+                -->
+                <div class="container-fluid text-center bg-dark py-5">
+                    <div class="row row-cols-1">
+                        <div class="col mb-3">
+                            <a href="https://linkedin.com/in/elina-olsson-5504181b0"><i class="fa-brands fa-linkedin fs-3 pe-2 link-color"></i></a>
+                            <a href="http://github.com/elinaols"><i class="fa-brands fa-github fs-3 pe-2 link-color"></i></a>
+                        </div>
+                        <div class="col">
+                            <p class="text-lowercase link-color mb-3"><strong class="link-color">mail:</strong><br>elinaannaolsson@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+>>>>>>> f7d9320 (Updated portfolio)
+                <!--Sidfot slutar-->
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>

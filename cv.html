@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Elina Olsson -cv</title>
+    </head>
+    <body>
+        <main class="main">
+            <!--Wrapper-->
+            <!--En container som tar upp 100% av fönstrets bredd. Här finner sig även en bakgrundsbild då jag vill sätta en navigationsmeny över den.-->
+            <div class="container-fluid px-0 cv-bg-img">
+                <!--
+                    Navigation vars vita bakgrund har en opacitet på 25%. Under brytningspunkten lg (992px) omvandlas navigationen till en hamburgermeny, med hjälp av "navbar-expand-lg".
+                    "Navbar-brand" förklarar vilket namn/företag som har webbsidan. "Span"-texten syns inte på skärmar under 992px, vilket görs tillsammans med "d-none" och "d-lg-block".
+                    "Primary-color" klassen ger en blå färg till texten samt ger klassen "text-font" ett annat typsnitt till texten. "Sticky-top" gör att navigationsmenyn stannar kvar överst på sidan när man scrollar.
+                -->
+                <nav class="navbar navbar-expand-lg bg-white bg-opacity-25 mb-5 sticky-top"> 
+                    <div class="container-fluid"> 
+                        <a class="navbar-brand mx-3" href="index.html"><h4 class="text-font primary-color mb-0">Elina Olsson</h4></a>
+<<<<<<< HEAD
+                        <span class="text-font pt-0 pb-3 text-lowercase d-none d-lg-block d-md-none">Webbutvecklare</span>
+=======
+                        <span class="text-font pt-0 pb-3 text-lowercase d-none d-lg-block d-md-none">Fullstack utvecklare</span>
+>>>>>>> f7d9320 (Updated portfolio)
+                        <!--
+                        "Navbar-toggler" tillsammans med "data-bs-toggle" används för att trigga igång Javsscript så det går att öppna och stänga navigationsmenyn. "Aria-expanded" förklarar tillståndet på menyn, dvs om den är expanderad eller stängd.
+                        "Aria-label" talar om vilken typ av interaktivitet det handlar om.
+                        I "span"-elementet finns en klass som ger en hamburger-ikon för att användaren ska förstå att det är en meny.
+                        -->
+                        <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!--
+                        Klasserna "collapse" och "navbar-collapse" samlar ihop och döljer navbarinnehåll efter vald brytpunkt hos föräldern, i detta fall under 992px. "Justify-content-end" positionerar menyn längst till höger, horisiontellt.
+                        "Navbar-nav" ger en navigation som också har stöd för dropdown-menyer. "Nav-item" är ett list-element som erhåller en länk, "nav-link".
+                        -->
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                            <ul class="navbar-nav mb-2 mb-lg-0">
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link text-lowercase" href="projects.html">Projekt</a>
+                                </li>
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link text-lowercase" href="cv.html">CV</a>
+                                </li>
+<<<<<<< HEAD
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link text-lowercase" href="contact.html">Kontakt</a>
+                                </li>
+=======
+>>>>>>> f7d9320 (Updated portfolio)
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!--Navigation slutar-->
+                <!--Huvudinnehåll-->
+                <!--
+                    En container med utfyllnad i höjdled som ges med "pt" samt "pb". Marginal till botten ges med "mb".
+                    "D-flex" och "flex-column" positionerar elementen på rad efter varandra. "Justify-content-center" och "align-items-center" centrerar allt i höjd- och sidled.
+                    Annat typsnitt ges med "text-font" och "text-lowercase" ger små bokstäver. "Primary-color" ger blå text.
+                -->
+                <div class="container pt-3 pt-sm-5 pb-3">
+                    <div class="d-flex flex-column justify-content-center align-items-center mb-5">
+                        <p class="fs-1 text-font text-lowercase mb-0">Elina Olsson</p>
+<<<<<<< HEAD
+                        <p class="fs-5 primary-color text-font text-lowercase mb-1">Webbutvecklare</p>
+=======
+                        <p class="fs-5 primary-color text-font text-lowercase mb-1">Fullstack utvecklare</p>
+>>>>>>> f7d9320 (Updated portfolio)
+                        <!--
+                            Lista som är positionerad med hjälp av "d-flex". "Flex-lg-row" lägger list-elementen på rad bredvid varandra efter 992px och "flex-wrap" sätter list-elementen på en vertikal linje när utrymme fattas på raden.
+                            "Justify-content-center" centrerar elementen.
+                            "List-inline" tar bort punkten på li-elementet. "Pe-4" ger utfyllnad till höger om list-elementet.
+                        -->
+                        <ul class="fs-6 text-font text-lowercase d-flex flex-lg-row flex-wrap justify-content-center">
+                            <!--
+                                "Link-dark" ger en mörk länk och "link-offset-2" ger distans mellan text och linje. Opacitet ligger på 25% och när användaren hovrar över elementet får länken 100% opacitet. Detta görs med
+                                "link-underline-opacity-25" och "link-underline-opacity-100-hover".
+                            -->
+                            <li class="pe-4 fw-bold"><a href="http://github.com/elinaols" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">https://github/elinaols</a></li>
+                            <li class="pe-4 fw-bold">elinaannaolsson@gmail.com</li>
+                            <li class="pe-4 fw-bold">Stockholm</li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--
+                    Container som har ett gridsystem i form av kolumner, "col". Texten är centrerad, vilket görs med "text-center". Marginal i botten ges med "mb" och utfyllnad i botten ges med "pb".
+                    "Border-bottom" ger en linje under texten. "Fs-3" ger en större font-storlek. "Text-start" ger en västerjustering på texten. "Text-start" ger vänsterjusterad text och "text-end" ger högerjusterad text.
+                    "Primary-color" ger blå färg till texten.
+                    
+                    Inuti vissa kolumner finns ytterligare en container som positionerar elementen med "d-flex" och "justify-content-between". Det ger maximalt utrymme mellan elementen i sidled.
+                    "Flex-wrap" sätter elementen under varandra när utrymmet inte räcker till. 
+                --> 
+                <div class="container text-center mb-5">
+<<<<<<< HEAD
+                    <div class="col pb-5">
+                        <p class="fs-3 border-bottom pb-3"><strong>Karriäröversikt</strong></p>
+                        <p class="text-start">Kreativ och målinriktad webbutvecklare i slutskedet av min utbildning. Min bakgrund som frisör har gett mig en stark känsla för detaljer och kreativ problemlösning, vilket är egenskaper som jag nu bygger vidare på genom mina studier och praktiska projekt inom webbutveckling. Under utbildningen har jag utvecklat min tekniska kompetens för att skapa moderna, responsiva och användarvänliga webbplatser. Nu söker jag möjligheter att kombinera mina kreativa och tekniska färdigheter för att bidra med innovativa lösningar.</p>
+                    </div>
+                    <div class="col pb-5">
+=======
+                    <div class="col pb-5 main-cv">
+                        <p class="fs-3 border-bottom pb-3"><strong>Karriäröversikt</strong></p>
+                        <p class="text-start">Hej! Som snart examinerad fullstack-utvecklare strävar jag efter att arbeta med både frontend och backend för att skapa effektiva och användarvänliga webbapplikationer. Mitt mål är att vidareutveckla min tekniska kompetens och bidra med innovativa lösningar till ert team.</p>
+                    </div>
+                    <div class="col pb-5 main-cv">
+>>>>>>> f7d9320 (Updated portfolio)
+                        <p class="fs-3 border-bottom pb-3"><strong>Utbildning</strong></p>
+                        <p class="text-start mb-0"><strong class="primary-color mb-0 fs-5">Högskolan Väst</strong></p>
+                        <div class="container px-0 d-flex justify-content-between flex-wrap">
+                            <p class="text-start col">Webmaster, 120 hp</p>
+<<<<<<< HEAD
+                            <p class="text-end mb-0 col">2023-</p>
+=======
+                            <p class="text-end mb-0 col">Aug 2023 - Jun 2025</p>
+>>>>>>> f7d9320 (Updated portfolio)
+                        </div>
+                        <p class="text-start mb-0"><strong class="primary-color mb-0 fs-5">Björn Axén Academy</strong></p>
+                        <div class="container px-0 d-flex justify-content-between flex-wrap">
+                            <p class="text-start col">Frisörutbildning</p>
+<<<<<<< HEAD
+                            <p class="text-end mb-0 col">Aug 2018 - June 2019</p>
+                        </div>
+                    </div>
+                    <div class="col pb-5">
+=======
+                            <p class="text-end mb-0 col">Aug 2018 - Jun 2019</p>
+                        </div>
+                    </div>
+                    <div class="col pb-5 main-cv">
+>>>>>>> f7d9320 (Updated portfolio)
+                        <p class="fs-3 border-bottom pb-3"><strong>Erfarenhet</strong></p>
+                        <p class="text-start mb-0"><strong class="primary-color mb-0 fs-5">Sthlm Ladies & Gents</strong></p>
+                        <div class="container px-0 pb-2 d-flex justify-content-between flex-wrap">
+                            <div class="text-start col pt-1">
+                                <p class="mb-0 pb-1">Frisör</p>
+                                <p class="mb-0 pb-1">- Bra kundbemötande och service genom att erbjuda kreativa lösningar för att uppfylla kundernas önskemål och behov.</p>
+                                <p class="mb-0 pb-1">- Skapade marknadsföringsinnehåll för salongens sociala medier för att öka synligheten och locka nya kunder.</p>
+                                <p class="mb-0 pb-1">- Arbetade nära kollegor för att stötta varandra och skapa en trygg och produktiv arbetsmiljö.</p>
+                            </div>
+                            <p class="text-end mb-0 col">Aug 2021 - Aug 2023</p>
+                        </div>
+                        <p class="text-start mb-0"><strong class="primary-color mb-0 fs-5">Björn Axén</strong></p>
+                        <div class="container px-0 d-flex justify-content-between flex-wrap">
+                            <div class="text-start col pt-1">
+                                <p class="mb-0 pb-1">Frisör</p>
+                                <p class="mb-0 pb-1">- Stort fokus på att leverera hög kvalitet i alla behandlingar, där noggrannhet och detaljer var viktiga för att säkerställa ett professionellt resultat.</p>
+                                <p class="mb-0 pb-1">- Tillämpade avancerade färg- och klipptekniker för att skapa skräddarsydda resultat som mötte kundens önskemål och behov.</p>
+                                <p class="mb-0 pb-1">- Tog gesällbrev under min tid på salongen, vilket fördjupade min expertis och certifierade mina färdigheter inom frisöryrket.</p>
+                            </div>
+                            <p class="text-end col">Jul 2019 - Jul 2021</p>
+                        </div>
+                    </div>
+                    <div class="col pb-4">
+                        <p class="fs-3 border-bottom pb-3"><strong>Skills</strong></p>
+<<<<<<< HEAD
+                        <p><strong class="fs-5 primary-color pe-2">Klientsidan</strong><span>html - css - javascript - react.js - angular - vue - jquery - bootstrap - sass - c#</span></p>
+                        <p><strong class="fs-5 primary-color pe-2">Serversidan</strong><span>sql - php - nodejs - asp.net - c# - mysql - mongodb - sqlite</span></p>
+                        <p><strong class="fs-5 primary-color pe-2">Övriga färdigheter</strong><span>git - figma - visual studio code - responsiv design</span></p>
+=======
+                        <p><strong class="fs-5 primary-color pe-2">Klientsidan</strong><span>html - css - javascript - react - react native - angular - vue - jquery - bootstrap - sass - typescript</span></p>
+                        <p><strong class="fs-5 primary-color pe-2">Serversidan</strong><span>sql - php - node.js - asp.net - c# - mysql - mongodb - sqlite - databashantering</span></p>
+                        <p><strong class="fs-5 primary-color pe-2">Övriga färdigheter</strong><span>git - figma - visual studio code - responsiv design - render - wordpress - b-körkort</span></p>
+>>>>>>> f7d9320 (Updated portfolio)
+                    </div>
+                </div>
+                <!--Huvudinnehåll slutar-->
+                <!--Sidfot med ikoner samt några kontaktuppgifter-->
+                <!--
+                    "Container-fluid" gör så sidfoten tar upp 100% av webbsidans bredd. "Bg-dark" ger ett mörkare intryck av sidfotens bakgrund. Utfyllnad ges i topp och botten genom py-5.
+                    Containern är uppbyggt som ett gridsystem, med rader och kolumner. "Row-cols-1" talar om att varje kolumn ska ta upp en hel rad. 
+                -->
+                <div class="container-fluid text-center bg-dark py-5">
+                    <div class="row row-cols-1">
+                        <div class="col mb-3">
+                            <a href="https://linkedin.com/in/elina-olsson-5504181b0"><i class="fa-brands fa-linkedin fs-3 pe-2 link-color"></i></a>
+                            <a href="http://github.com/elinaols"><i class="fa-brands fa-github fs-3 pe-2 link-color"></i></a>
+<<<<<<< HEAD
+                            <a href="contact.html"><i class="fa-solid fa-phone fs-3 link-color"></i></a>
+=======
+>>>>>>> f7d9320 (Updated portfolio)
+                        </div>
+                        <div class="col">
+                            <p class="text-lowercase link-color mb-3"><strong class="link-color">Mail:</strong><br>elinaannaolsson@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Sidfot slutar-->
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>

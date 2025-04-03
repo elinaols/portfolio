@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* BASE */
+* {
+    font-family: "Montserrat";
+    color: rgb(52,53,53);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* LAYOUT */
+.index-bg-image {
+    background-image: url(images/multi-acrylic.webp);
+    height: 415px;
+    background-position: 10% 10%;
+    background-size: cover;
+}
+.projects-bg-img {
+    background-image: url(images/yellow-acrylic.webp);
+    height: 360px;
+    background-position: 100% 80%;
+    background-size: cover; 
+}
+.cv-bg-img {
+    background-image: url(images/blue-yellow-acrylic.webp);
+    height: 300px;
+    background-position: 70% 90%;
+    background-size: cover;
+}
+.contact-bg-img {
+    background-image: url(images/pink-blue-acrylic.webp);
+    height: 300px;
+    background-position: 20% 30%;
+    background-size: cover;
+}
+.stockholm {
+    width: 550px;
+    height: auto;
+}
+.main-cv {
+    max-width: 75ch;
+    margin: 0 auto;
+}
+/* MODULE */
+.primary-color { 
+    color: rgb(52,53,53);
+}
+.link-color, .btn-color { 
+    color: rgb(255, 255, 224);
+}
+.card {
+    transition: all 0.3s;
+}
+.text-font, .nav-link {
+    font-family: "Abril Fatface";
+}
+.dropdown-menu {
+    display: none;
+}
+.card img {
+    width: 360px !important;
+    height: 175px !important;
+}
+/* STATE */
+.card:hover {
+    transform: scale(1.1);
+}
+.fa-solid:hover, .fa-brands:hover, .contact-link-hover:hover {
+    color: rgb(156, 156, 156);
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+@media (max-width: 770px) {
+    ul li:last-child {
+        list-style: none;
+    }
+}

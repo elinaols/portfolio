@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="preload" fetchpriority="high" as="image" href="images/multi-acrylic.webp" type="image/webp">
+        <link rel="stylesheet" href="style.css">
+        <title>Elina Olsson</title>
+    </head>
+    <body> 
+        <main>
+            <!--Wrapper-->
+            <!--En container som tar upp 100% av fönstrets bredd. Här finner sig även en bakgrundsbild då jag vill sätta en navigationsmeny över den.-->
+            <div class="container-fluid px-0 index-bg-image">
+                <!--
+                    Navigation vars vita bakgrund har en opacitet på 25%. Under brytningspunkten lg (992px) omvandlas navigationen till en hamburgermeny, med hjälp av "navbar-expand-lg".
+                    "Navbar-brand" förklarar vilket namn/företag som har webbsidan. "Span"-texten syns inte på skärmar under 992px, vilket görs tillsammans med "d-none" och "d-lg-block".
+                    "Primary-color" klassen ger en blå färg till texten samt ger klassen "text-font" ett annat typsnitt till texten. "Sticky-top" gör att navigationsmenyn stannar kvar överst på sidan när man scrollar.
+                -->
+                <nav class="navbar navbar-expand-lg bg-white bg-opacity-25 mb-5 sticky-top"> 
+                    <a class="navbar-brand mx-3 fs-4 text-font primary-color mb-0" href="index.html">Elina Olsson</a>
+<<<<<<< HEAD
+                    <span class="text-font pt-0 pb-3 text-lowercase d-none d-lg-block">Webbutvecklare</span>
+=======
+                    <span class="text-font pt-0 pb-3 text-lowercase d-none d-lg-block">Fullstack utvecklare</span>
+>>>>>>> f7d9320 (Updated portfolio)
+                    <!--
+                        "Navbar-toggler" tillsammans med "data-bs-toggle" används för att trigga igång Javsscript så det går att öppna och stänga navigationsmenyn. "Aria-expanded" förklarar tillståndet på menyn, dvs om den är expanderad eller stängd.
+                        "Aria-label" talar om vilken typ av interaktivitet det handlar om.
+                        I "span"-elementet finns en klass som ger en hamburger-ikon för att användaren ska förstå att det är en meny.
+                    -->
+                    <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!--
+                        Klasserna "collapse" och "navbar-collapse" samlar ihop och döljer navbarinnehåll efter vald brytpunkt hos föräldern, i detta fall under 992px. "Justify-content-end" positionerar menyn längst till höger, horisiontellt.
+                        "Navbar-nav" ger en navigation som också har stöd för dropdown-menyer. "Nav-item" är ett list-element som erhåller en länk, "nav-link".
+                    -->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item mx-3">
+                                <a class="nav-link text-lowercase" href="projects.html">Projekt</a>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link text-lowercase" href="cv.html">CV</a>
+                            </li>
+<<<<<<< HEAD
+                            <li class="nav-item mx-3">
+                                <a class="nav-link text-lowercase" href="contact.html">Kontakt</a>
+                            </li>
+=======
+>>>>>>> f7d9320 (Updated portfolio)
+                        </ul>
+                    </div>
+                </nav>
+                <!--Navigation slutar-->
+                <!--Huvudinnehåll-->
+                <!--
+                    En container med en grid-konstruktion där elementen är centrerade i sidled. Marginal finns i toppen och botten, vilket görs med my-5.
+                -->
+                <div class="container text-center mt-5 mb-5 mb-lg-0">
+                    <div class="row justify-content-center">
+                        <!--
+                            Under 576px har texten en auto kolumn som känner efter hur mycket utrymme den behöver. Efter 576px tar text och bild upp lika mycket utrymme på bredden. Efter 768px tar texten upp 7 delar och bilden tar upp 5 delar av webbsidans bredd.
+                        -->
+                        <div class="col-auto col-sm-6 col-md-7 mt-5 mt-md-4 pt-sm-3 pt-md-5">
+                            <!--
+                                "fs-1" sätter storlek på texten. Typsnittet ges av "text-font" och "primary-color" ger blå färg. Från ett litet skärmläge (576px) och uppåt ska texten positioneras från vänster till höger. 
+                                Inuti första "span"-elementet infinner sig "text-capitalize" som ska ge stor bokstav till texten, i detta fall bokstaven E. 
+                                Efter storlek xl (1200px) tillkommer lite extra padding samt marginal från vänster för att skapa lite annan dynamik i designen (för texten inuti andra span-elementet).
+                            -->
+                            <p class="text-font fs-1 text-lowercase text-lg-start primary-color">Hej, jag heter <span class="text-capitalize text-font primary-color">E</span>lina <br><span class="text-font ms-xl-1"><span class="bold">-</span> en driven och kreativ utvecklare</span></p>
+<<<<<<< HEAD
+                            <!--
+                                "Role=button" finns med för att dels för att komplettera klassen "btn" (som egentligen används för button-element), dels förtydliga vad själva syftet med länken är. 
+                                "Btn-lg" ger ett större intryck av knappens storlek. "Btn-color" sätter textfärgen till en vit färg. "Aria-pressed" handlar om vad statusen på knappen är, om den är nedtryckt eller inte.
+                            -->
+                            <a href="contact.html" role="button" class="btn btn-secondary btn-color btn-lg text-font text-uppercase" aria-pressed="true">Kontakt</a>
+=======
+>>>>>>> f7d9320 (Updated portfolio)
+                        </div>
+                        <div class="col-auto col-sm-6 col-md-5 mb-lg-5 mb-lg-0 mt-0 mt-sm-3">
+                            <!--
+                                Bild som har en klass "rounded" som rundar av hörnen. "Img-fluid" innebär att bilden är responsiv och skalas efter hur föräldra-elementet ser ut.
+                            -->
+                            <img src="images/me.webp" class="rounded mt-5 mt-md-0 pt-md-5 pt-0 img-fluid" alt="Picture of me">
+                        </div>
+                    </div>
+                </div>
+                <!--
+                    Container som har en grid-konstruktion med både marginal och utfyllnad i botten för att ge vitt utrymme.
+                -->
+                <div class="container mb-5 pb-4">
+                    <div class="row">
+                        <!--
+                            Under 576px tar bild och text upp lika stort utrymme i sidled. Efter 992px tar bilden upp 7 delar och texten tar upp 5 delar.
+                            Bilden har två olika paddingar för olika skärmupplösningar, till höger används "pe" och till toppen används "pt".
+                            Bilden centreras både i höjdled och sidled, med hjälp av align-self-center och text-center.
+                        -->
+                        <div class="col-12 col-lg-7 pt-0 pt-sm-4 pt-lg-0 pe-md-2 pe-lg-5 align-self-center text-center">
+                            <!--
+                            "Img-fluid" innebär att bilden är responsiv och skalas efter hur föräldra-elementet ser ut. Alltså är bredden 100% och höjden är automatisk.
+                            -->
+                            <img src="images/stockholm-day-view.webp" class="rounded mb-5 mb-lg-0 img-fluid stockholm" alt="Stockholm city">
+                        </div>
+                        <div class="col-12 col-lg-5 text-start p-3">
+                            <!--
+                            "fs-3" ger en font-size på ungefär 26px och "strong" hjälper till att ge fetstil till texten.
+                            -->
+<<<<<<< HEAD
+                            <p class="fs-3"><strong>Kreativ och driven webbutvecklare</strong></p>
+                            <p>Som en snart examinerad webbutvecklare fokuserar jag på att skapa användarvänliga och visuellt tilltalande webbplatser. Min kreativa och tekniska kompetens gör så att jag strävar efter att utveckla lösningar som är både effektiva och funktionella.</p>
+=======
+                            <p class="fs-3"><strong>Kreativ och driven fullstack utvecklare</strong></p>
+                            <p>Som en snart examinerad fullstack utvecklare fokuserar jag på att skapa användarvänliga och visuellt tilltalande webbplatser. Min kreativa och tekniska kompetens gör så att jag strävar efter att utveckla lösningar som är både effektiva och funktionella.</p>
+>>>>>>> f7d9320 (Updated portfolio)
+                        </div>
+                    </div>
+                </div>
+                <!--Huvudinnehåll slutar-->
+                <!--Sidfot med ikoner samt några kontaktuppgifter-->
+                <!--
+                    "Container-fluid" gör så sidfoten tar upp 100% av webbsidans bredd. "Bg-dark" ger ett mörkare intryck av sidfotens bakgrund. Utfyllnad ges i topp och botten genom py-5.
+                    Containern är uppbyggt som ett gridsystem, med rader och kolumner. "Row-cols-1" talar om att varje kolumn ska ta upp en hel rad. 
+                -->
+                <div class="container-fluid text-center bg-dark py-5">
+                    <div class="row row-cols-1">
+                        <div class="col mb-3">
+                            <a href="https://linkedin.com/in/elina-olsson-5504181b0"><i class="fa-brands fa-linkedin fs-3 pe-2 link-color"></i></a>
+                            <a href="http://github.com/elinaols"><i class="fa-brands fa-github fs-3 pe-2 link-color"></i></a>
+<<<<<<< HEAD
+                            <a href="contact.html"><i class="fa-solid fa-phone fs-3 link-color"></i></a>
+=======
+>>>>>>> f7d9320 (Updated portfolio)
+                        </div>
+                        <div class="col">
+                            <p class="text-lowercase link-color mb-3"><strong class="link-color">Mail:</strong><br>elinaannaolsson@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Sidfot slutar-->
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>
